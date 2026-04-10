@@ -54,15 +54,15 @@ PROMPT=$'%(?.%F{white}.%B%F{red})%n@%m%f%b %F{white}[%*]%f${vcs_info_msg_0_} | %
 [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-[[ -f /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
-    source /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-bindkey '^[[A' history-substring-search-up    # Up arrow
-bindkey '^[[B' history-substring-search-down  # Down arrow
-
 # syntax-highlighting MUST be last
 [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[[ -f /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
+    source /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey 'key[up]' history-substring-search-up    # Up arrow
+bindkey 'key[down]' history-substring-search-down  # Down arrow
 
 # ── aliases ───────────────────────────────────────────────────────────────────
 alias ll='ls -lah --color=auto'
