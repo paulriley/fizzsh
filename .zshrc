@@ -47,7 +47,7 @@ zstyle ':vcs_info:git:*' formats       ' | %F{green}git:%b%f %c%u'
 zstyle ':vcs_info:git:*' actionformats ' | %F{green}git:%b%f %F{red}(%a)%f %c%u'
 
 setopt PROMPT_SUBST
-PROMPT=$'%(?.%F{white}.%B%F{red})%n%f%b %F{white}[%*]%f${vcs_info_msg_0_} | %F{blue}%~%f\n%(?,%(!.#.>),%(!.#.!)) '
+PROMPT=$'%(?.%F{white}.%B%F{red})%n@%m%f%b %F{white}[%*]%f${vcs_info_msg_0_} | %F{blue}%~%f\n%(?,%(!.#.>),%(!.#.!)) '
 
 # ── plugins ───────────────────────────────────────────────────────────────────
 # apt install zsh-autosuggestions zsh-syntax-highlighting
