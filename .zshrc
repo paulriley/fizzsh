@@ -61,8 +61,8 @@ PROMPT=$'%(?.%F{white}.%B%F{red})%n@%m%f%b %F{white}[%*]%f${vcs_info_msg_0_} | %
 [[ -f /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
     source /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-bindkey '^[[A' history-substring-search-up    # Up arrow
-bindkey '^[[B' history-substring-search-down  # Down arrow
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # ── aliases ───────────────────────────────────────────────────────────────────
 alias ll='ls -lah --color=auto'
