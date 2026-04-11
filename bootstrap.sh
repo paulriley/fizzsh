@@ -14,6 +14,10 @@ echo "==> Installing packages"
 apt-get update -qq
 apt-get install -y -qq sudo zsh zsh-autosuggestions zsh-syntax-highlighting curl
 
+mkdir -p /usr/share/zsh-history-substring-search
+curl -fsSL https://raw.githubusercontent.com/zsh-users/zsh-history-substring-search/master/zsh-history-substring-search.zsh \
+    -o /usr/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 echo "==> Creating user ${USERNAME}"
 if ! id "${USERNAME}" &>/dev/null; then
     useradd -m -s /bin/zsh "${USERNAME}"
