@@ -4,6 +4,8 @@ compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+path=($HOME/.local/bin $path)
+
 # ── history ───────────────────────────────────────────────────────────────────
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -14,7 +16,6 @@ setopt SHARE_HISTORY
 
 # ── options ───────────────────────────────────────────────────────────────────
 setopt AUTO_CD
-setopt CORRECT
 setopt NO_BEEP
 
 # ── sudo plugin (inlined — no oh-my-zsh dependency) ──────────────────────────
@@ -70,3 +71,6 @@ alias la='ls -A --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias zshrc-update='curl -fsSL https://raw.githubusercontent.com/paulriley/fizzsh/main/.zshrc -o ~/.zshrc && source ~/.zshrc'
+
+# ── export PATH array to child processes ───────────────────────────────────────
+export PATH
